@@ -9,6 +9,7 @@ _install() {
 	cd $tmpd
 	source_path="https://github.com/thanos-io/thanos/releases/download/v${version}/thanos-${version}.linux-amd64.tar.gz"
 	curl -L $source_path -o ${version}.tar.gz
+	echo curl -L $source_path -o ${version}.tar.gz
 	tar -xzf ${version}.tar.gz
 	rm ${version}.tar.gz
 	mv ./thanos-${version}/* $install_path/
