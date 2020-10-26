@@ -12,8 +12,8 @@ _install() {
 	echo curl -L $source_path -o ${version}.tar.gz
 	tar -xzf ${version}.tar.gz
 	rm ${version}.tar.gz
-	mv ./thanos-${version}/* $install_path/
-
+	mkdir -p $install_path/bin
+	mv ./thanos-${version}.linux-amd64/* $install_path/bin/
 	rm -rf $tmpd
 }
 
